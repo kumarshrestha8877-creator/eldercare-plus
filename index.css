@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Accessible focus indicator for keyboard navigation */
+:focus-visible {
+  outline: 3px solid #059669;
+  outline-offset: 3px;
+}
+
+/* Font Size Scaling */
+.font-size-normal {
+  font-size: 16px;
+}
+
+.font-size-large {
+  font-size: 19px;
+}
+.font-size-large h1 { font-size: 2.2rem; }
+.font-size-large h2 { font-size: 1.8rem; }
+.font-size-large h3 { font-size: 1.5rem; }
+.font-size-large p, .font-size-large button, .font-size-large input { font-size: 1.2rem; }
+
+.font-size-xl {
+  font-size: 22px;
+}
+.font-size-xl h1 { font-size: 2.6rem; }
+.font-size-xl h2 { font-size: 2.1rem; }
+.font-size-xl h3 { font-size: 1.8rem; }
+.font-size-xl p, .font-size-xl button, .font-size-xl input { font-size: 1.4rem; }
+
+/* High Contrast Themes */
+.theme-high-contrast-dark {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+.theme-high-contrast-dark .bg-white,
+.theme-high-contrast-dark .bg-elder-warm-50,
+.theme-high-contrast-dark .bg-slate-50,
+.theme-high-contrast-dark .bg-gray-50 {
+  background-color: #0a0a0a !important;
+  border-color: #ffff00 !important;
+  color: #ffffff !important;
+}
+
+.theme-high-contrast-dark p,
+.theme-high-contrast-dark span,
+.theme-high-contrast-dark h1,
+.theme-high-contrast-dark h2,
+.theme-high-contrast-dark h3,
+.theme-high-contrast-dark h4 {
+  color: #ffff00 !important;
+}
+
+.theme-high-contrast-dark button {
+  border: 2px solid #ffff00 !important;
+  font-weight: 800 !important;
+}
+
+.theme-high-contrast-dark .text-slate-500,
+.theme-high-contrast-dark .text-slate-600,
+.theme-high-contrast-dark .text-gray-500 {
+  color: #00ffff !important;
+}
+
+/* Soft Light High Contrast */
+.theme-soft-light {
+  background-color: #ffffff !important;
+}
+.theme-soft-light .card,
+.theme-soft-light div[class*="rounded-"] {
+  border-width: 2px !important;
+  border-color: #0f172a !important;
+}
+
+/* Pulsing SOS effect */
+@keyframes sos-pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 18px rgba(239, 68, 68, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.animate-sos-pulse {
+  animation: sos-pulse 1.8s infinite;
+}

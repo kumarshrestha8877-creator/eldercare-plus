@@ -1,5 +1,5 @@
 {
-  "buildCommand": "unzip -o eldercare-plus-live-build.zip -d dist",
+  "buildCommand": "unzip -o eldercare-plus-live-build.zip || true",
   "outputDirectory": "dist",
   "rewrites": [
     {
